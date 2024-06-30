@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="374.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.alltagshuebsch.einstieg_crontrolsfx.Einstieg_ControlsFxController">
+   <children>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="600.0">
+         <children>
+            <MenuBar layoutX="-1.0" layoutY="1.0" prefHeight="22.0" prefWidth="600.0">
+               <menus>
+                  <Menu fx:id="menuDatei" mnemonicParsing="false" text="Datei">
+                     <items>
+                        <MenuItem fx:id="menuItemBeenden" mnemonicParsing="false" onAction="#onActionProgrammBeenden" text="Programm Beenden" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            <Accordion layoutX="-1.0" layoutY="27.0" prefHeight="348.0" prefWidth="600.0">
+               <panes>
+                  <TitledPane fx:id="accordeonAufgabeEins" animated="false" text="Aufgabenteil 1">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="txtFieldParrotText" layoutX="25.0" layoutY="47.0" prefHeight="26.0" prefWidth="373.0" />
+                              <Button fx:id="btnParrot" layoutX="442.0" layoutY="47.0" mnemonicParsing="false" onAction="#onActionPapageiAnsprechen" text="Papagei ansprechen" />
+                              <ImageView fitHeight="189.0" fitWidth="148.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../pictures/bird-1196477_1280.png" />
+                                 </image>
+                              </ImageView>
+                              <Ellipse fill="WHITE" layoutX="337.0" layoutY="145.0" radiusX="159.0" radiusY="44.0" stroke="WHITE" strokeType="INSIDE" />
+                              <Text fx:id="txtParrotText" layoutX="220.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="233.5999755859375" />
+                              <Polyline fill="WHITE" layoutX="170.0" layoutY="134.0" points="-50.000030517578125, -23.400001525878906, 34.999969482421875, -8.200019836425781, 19.800018310546875, 18.999984741210938, -50.000030517578125, -23.400001525878906" stroke="WHITE" strokeType="INSIDE" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="accordeonAufgabenteilZwei" animated="false" text="Aufgabenteil 2">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ListView fx:id="lwListe" layoutX="206.0" layoutY="14.0" prefHeight="215.0" prefWidth="170.0" />
+                              <ImageView fitHeight="242.0" fitWidth="182.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../pictures/engineer-23810_1280.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnAddEintrag" layoutX="543.0" layoutY="55.0" mnemonicParsing="false" onAction="#onActionAddEintrag" prefHeight="26.0" prefWidth="46.0" text="Add" />
+                              <Label layoutX="384.0" layoutY="7.0" prefHeight="44.0" prefWidth="218.0" text="Anzahl für mehrere Einträge eingeben oder Bezeichnung für bestimmten Eintrag" wrapText="true">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font></Label>
+                              <Button fx:id="btnListeLeeren" layoutX="385.0" layoutY="203.0" mnemonicParsing="false" onAction="#onActionListeLeeren" text="Liste Leeren" />
+                              <TextField fx:id="txtBoxEintragBauarbeiter" layoutX="385.0" layoutY="56.0" />
+                              <Button fx:id="btnAusgewähltenWertAuslesen" layoutX="385.0" layoutY="102.0" mnemonicParsing="false" onAction="#onActionWertAuslesen" text="Ausgewählten Wert auslesen" />
+                              <Button fx:id="btnAlleWerteAuslesen" layoutX="384.0" layoutY="136.0" mnemonicParsing="false" onAction="#onActionAlleWerteAuslesen" text="Alle Werte auslesen" />
+                              <Button fx:id="btnEintragLoeschen" layoutX="384.0" layoutY="170.0" mnemonicParsing="false" onAction="#onActionEintragLöschen" text="Eintrag Löschen" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+                  <TitledPane fx:id="AccordeonAufgabenteilDrei" animated="false" text="Aufgabenteil 3">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imgFenster" fitHeight="194.0" fitWidth="191.0" layoutX="391.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                              <ComboBox fx:id="cmbBilder" layoutX="429.0" layoutY="222.0" onAction="#onActionBildAnzeigen" prefHeight="26.0" prefWidth="127.0" />
+                              <Button fx:id="btnBilderFuellen" layoutX="26.0" layoutY="27.0" mnemonicParsing="false" onAction="#onActionBilderFuellen" text="Füllen mit" />
+                              <Label layoutX="164.0" layoutY="31.0" text="Bildern" />
+                              <ImageView fitHeight="228.0" fitWidth="205.0" layoutX="14.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../pictures/woman-8376612_1280.png" />
+                                 </image>
+                              </ImageView>
+                              <Button fx:id="btnGalerieLeeren" layoutX="264.0" layoutY="223.0" mnemonicParsing="false" onAction="#onActionGalerieLeeren" text="Galerie Leeren" />
+                              <Button fx:id="btnMehrInfosUeberBild" layoutX="248.0" layoutY="188.0" mnemonicParsing="false" onAction="#onActionMehrInformationen" text="Mehr Informationen" />
+                              <TextField fx:id="txtAnzahlBilder" layoutX="112.0" layoutY="27.0" prefHeight="26.0" prefWidth="43.0" />
+                              <Label fx:id="lblBilderInfo" layoutX="234.0" layoutY="12.0" prefHeight="147.0" prefWidth="146.0" wrapText="true" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </panes>
+            </Accordion>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
